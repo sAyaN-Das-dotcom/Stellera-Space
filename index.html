@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stellara – Space for Young Explorers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: black;
+      color: #e0e0e0;
+      overflow-x: hidden;
+      transition: all 0.8s ease-in-out;
+    }
+
+    #stars, #stars2, #stars3 {
+      position: fixed;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background: transparent;
+      z-index: -1;
+    }
+
+    #stars {
+      background: url('https://www.script-tutorials.com/demos/360/images/stars.png') repeat;
+      animation: moveStars 200s linear infinite;
+    }
+
+    #stars2 {
+      background: url('https://www.script-tutorials.com/demos/360/images/stars2.png') repeat;
+      animation: moveStars 300s linear infinite;
+    }
+
+    #stars3 {
+      background: url('https://www.script-tutorials.com/demos/360/images/stars3.png') repeat;
+      animation: moveStars 500s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: -10000px 5000px; }
+    }
+
+    header {
+      background: rgba(0, 0, 50, 0.85);
+      padding: 40px 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      color: #ffd700;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffd700; }
+      to { text-shadow: 0 0 25px #fff700, 0 0 35px #ffd700; }
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(0, 0, 50, 0.4);
+      border-radius: 12px;
+      margin-bottom: 30px;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    h2 {
+      color: #ffcc00;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li::before {
+      content: "🚀 ";
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #999;
+    }
+
+    .rocket {
+      width: 100px;
+      margin: 0 auto;
+      display: block;
+      animation: rocket-fly 4s infinite alternate ease-in-out;
+    }
+
+    @keyframes rocket-fly {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-20px); }
+    }
+
+    #space-fact {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      margin-top: 10px;
+      border-left: 5px solid #ffd700;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      background: #000000aa;
+      color: white;
+      border: 1px solid #ffd700;
+      border-radius: 5px;
+    }
+
+    form button {
+      padding: 10px 15px;
+      background: #ffd700;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .blog-post {
+      margin-bottom: 15px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #ffcc00;
+    }
+  </style>
+</head>
+<body>
+
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/10/26/audio_57207eec5e.mp3?filename=space-ambient-11741.mp3" type="audio/mpeg">
+</audio>
+
+<header>
+  <h1>STELLARA</h1>
+  <p>A space research startup founded by a 16-year-old explorer.</p>
+  <nav>
+    <a href="#learn">Learn</a>
+    <a href="#rockets">Rocket Science</a>
+    <a href="#planets">Planets</a>
+    <a href="#join">Join</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="learn">
+  <h2>🧠 Learn About Space</h2>
+  <p>Explore the universe from the beginning.</p>
+  <div id="space-fact"><strong>Space Fact:</strong> Loading...</div>
+</section>
+
+<section id="rockets">
+  <h2>🚀 Rocket Science</h2>
+  <ul>
+    <li>How rockets launch into space</li>
+    <li>Types of fuel used in modern rockets</li>
+    <li>Staging and orbit insertion explained</li>
+  </ul>
+</section>
+
+<section id="planets">
+  <h2>🪐 Explore the Planets</h2>
+  <ul>
+    <li>Mars: The red planet & missions by humans</li>
+    <li>Jupiter: The gas giant with a storm bigger than Earth</li>
+    <li>Saturn: Its rings, moons, and mysteries</li>
+  </ul>
+</section>
+
+<section id="join">
+  <h2>👨‍🚀 Join the Research Team</h2>
+  <p>Are you a young learner or science lover? Stellara invites you to be part of the youth research team. Collaborate, learn, and grow the future of space exploration!</p>
+</section>
+
+<section id="blog">
+  <h2>📝 Latest from the Blog</h2>
+  <div class="blog-post">
+    <h3>Why Space Tourism Will Change Our Future</h3>
+    <p>A look into how civilians visiting space could transform science education.</p>
+  </div>
+  <div class="blog-post">
+    <h3>Building My First Water Rocket</h3>
+    <p>Learn how a homemade rocket inspired a journey into aerospace!</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>📬 Contact Stellara</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>Made with 💫 by Stellara | © 2025 | Founded by a 16-year-old dreamer</p>
+</footer>
+
+<script>
+  const facts = [
+    "Venus is the hottest planet in the solar system.",
+    "The Moon is slowly moving away from Earth.",
+    "A day on Venus is longer than its year.",
+    "Jupiter has at least 92 moons!",
+    "The Sun contains 99.86% of the mass in our solar system."
+  ];
+  const factBox = document.getElementById("space-fact");
+  const randomFact = facts[Math.floor(Math.random() * facts.length)];
+  factBox.innerHTML = "<strong>Space Fact:</strong> " + randomFact;
+</script>
+
+</body>
+</html>
